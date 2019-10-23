@@ -1,17 +1,20 @@
 /*------------------------------------*\
 #FONTS
 \*------------------------------------*/
-
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
 
 :root {
-    /* colors */
+	/* colors */
+	--color-blue--light: #cce7ff;
+	--color-blue--dark: #0f3557;
+	--color-front: var(--color-blue--dark);
+	--color-back: var(--color-blue--light);
+	/* opacity */
 
-    /* opacity */
-
-    /* transitions */
+	/* transitions */
 }
 
 /*------------------------------------*\
@@ -25,18 +28,21 @@
 */
 
 html {
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+	line-height: 1.5;
+	font-family: 'Work Sans', sans-serif;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: var(--color-back);
+	color: var(--color-front);
+	font-feature-settings: 'zero' 1;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 /*
@@ -47,15 +53,15 @@ html {
 */
 
 ::-moz-selection {
-    background: red;
-    color: white;
-    text-shadow: none;
+	background: red;
+	color: white;
+	text-shadow: none;
 }
 
 ::selection {
-    background: red;
-    color: white;
-    text-shadow: none;
+	background: red;
+	color: white;
+	text-shadow: none;
 }
 
 /*------------------------------------*\
@@ -69,8 +75,8 @@ Default markup for images to make them responsive
 */
 
 img {
-    max-width: 100%;
-    vertical-align: top;
+	max-width: 100%;
+	vertical-align: top;
 }
 
 /*
@@ -82,34 +88,34 @@ img {
 h1,
 h2,
 h3 {
-    font-weight: 700;
+	font-weight: 700;
 }
 
 h1 {
-    font-size: 36px;
-    line-height: 48px;
-    margin: 0 0 24px;
+	font-size: 36px;
+	line-height: 48px;
+	margin: 0 0 24px;
 }
 
 h2 {
-    font-size: 32px;
-    line-height: 40px;
-    margin: 0 0 24px;
+	font-size: 32px;
+	line-height: 40px;
+	margin: 0 0 24px;
 }
 
 h3 {
-    font-size: 26px;
-    line-height: 32px;
-    margin: 0 0 24px;
+	font-size: 26px;
+	line-height: 32px;
+	margin: 0 0 24px;
 }
 
 h4,
 h5,
 h6 {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    margin: 0 0 24px;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 24px;
+	margin: 0 0 24px;
 }
 
 p,
@@ -119,73 +125,73 @@ dl,
 table,
 address,
 figure {
-    margin: 0 0 24px;
+	margin: 0 0 24px;
 }
 
 ul,
 ol {
-    padding-left: 24px;
+	padding-left: 24px;
 }
 
 li ul,
 li ol {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 blockquote {
-    font-style: normal;
-    font-size: 23px;
-    line-height: 32px;
-    margin: 0 0 24px;
+	font-style: normal;
+	font-size: 23px;
+	line-height: 32px;
+	margin: 0 0 24px;
 }
 
 blockquote * {
-    font-size: inherit;
-    line-height: inherit;
+	font-size: inherit;
+	line-height: inherit;
 }
 
 figcaption {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    margin-top: 8px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+	margin-top: 8px;
 }
 
 hr {
-    border: 0;
-    height: 1px;
-    background: LightGrey;
-    margin: 0 0 24px;
+	border: 0;
+	height: 1px;
+	background: LightGrey;
+	margin: 0 0 24px;
 }
 
 a {
-    color: red;
-    outline-color: red;
-    outline-width: medium;
-    outline-offset: 2px;
+	color: red;
+	outline-color: red;
+	outline-width: medium;
+	outline-offset: 2px;
 }
 
 a:visited,
 a:active {
-    color: red;
+	color: red;
 }
 
 a:hover,
 a:focus {
-    color: red;
+	color: red;
 }
 
 label,
 input {
-    display: block;
+	display: block;
 }
 
 select {
-    width: 100%;
+	width: 100%;
 }
 
 input::placeholder {
-    color: gray;
+	color: gray;
 }
 
 /*------------------------------------*\
@@ -199,26 +205,26 @@ input::placeholder {
 */
 
 .o-button-reset {
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: auto;
-    overflow: visible;
-    background: transparent;
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	overflow: visible;
+	background: transparent;
 
-    /* inherit font & color from ancestor */
-    color: inherit;
-    font: inherit;
+	/* inherit font & color from ancestor */
+	color: inherit;
+	font: inherit;
 
-    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
-    line-height: normal;
+	/* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+	line-height: normal;
 
-    /* Corrects font smoothing for webkit */
-    -webkit-font-smoothing: inherit;
-    -moz-osx-font-smoothing: inherit;
+	/* Corrects font smoothing for webkit */
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
 
-    /* Corrects inability to style clickable `input` types in iOS */
-    -webkit-appearance: none;
+	/* Corrects inability to style clickable `input` types in iOS */
+	-webkit-appearance: none;
 }
 
 /*
@@ -228,20 +234,31 @@ input::placeholder {
 */
 
 .o-hide-accessible {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
 }
 
 /*------------------------------------*\
 #COMPONENTS
 \*------------------------------------*/
-
+.c-app {
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+	width: 25rem;
+	min-height: 100vh; /*= viewport height*/
+}
+.c-app__summary {
+	font-size: 28px;
+	line-height: 40px;
+}
 /*
     Component: Logo
     ---
@@ -249,9 +266,18 @@ input::placeholder {
 */
 
 .c-logo {
-
+	margin-top: 2rem;
+	font-size: 1rem;
+	line-height: 1rem;
+	display: flex;
+	align-items: center;
 }
-
+.c-houre {
+	font-feature-settings: 'zero' 1;
+}
+.c-horizon {
+	margin-top: auto;
+}
 /*
     Component: Sun
     ---
@@ -259,13 +285,54 @@ input::placeholder {
 */
 
 .c-sun {
-
+	width: 22px;
+	fill: var(--color-front);
 }
 
 .c-logo .c-sun {
-
+	margin-right: 8px;
+}
+.c-horizon__line {
+	border-top: 1px solid var(--color-front);
+	margin-bottom: 2.125rem;
+	padding-top: 7px;
+	display: flex;
+	justify-content: space-between;
+}
+.c-horizon__time {
+	font-size: 12px;
+	line-height: 14px;
 }
 
+.c-horizon__sky-wrapper {
+	position: relative;
+	height: 200px;
+	overflow: hidden;
+	padding-top: 22px;
+	padding-right: 40px;
+}
+
+.c-horizon__sky {
+	position: relative;
+	height: 100%;
+}
+.c-horizon__sun {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	font-size: 12px;
+	line-height: 14px;
+	transform: translateY(22px);
+}
+.c-horizon__sun::before {
+	content: attr(data-time);
+	display: block;
+	margin-bottom: 8px;
+	text-align: center;
+}
 /*
     Component: App
     ---
@@ -286,7 +353,9 @@ input::placeholder {
     Utilities: Mute
     Mute with opacity
 */
-
+.u-muted {
+	opacity: 0.6;
+}
 /*------------------------------------*\
 #STATES
 \*------------------------------------*/
@@ -296,7 +365,10 @@ input::placeholder {
 */
 
 /* Night version: just switch the light and dark vars */
-
+.is-night {
+	--color-front: var(--color-blue--light);
+	--color-back: var(--color-blue--dark);
+}
 /*------------------------------------*\
 #MEDIA
 \*------------------------------------*/
@@ -309,61 +381,61 @@ input::placeholder {
 */
 
 @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        /* Black prints faster:
+	*,
+	*:before,
+	*:after {
+		background: transparent !important;
+		color: #000 !important;
+		/* Black prints faster:
         http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-    /*
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
+	a[href]:after {
+		content: ' (' attr(href) ')';
+	}
+	abbr[title]:after {
+		content: ' (' attr(title) ')';
+	}
+	/*
     * Don't show links that are fragment identifiers,
     * or use the `javascript:` pseudo protocol
     */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-    /*
+	a[href^='#']:after,
+	a[href^='javascript:']:after {
+		content: '';
+	}
+	pre {
+		white-space: pre-wrap !important;
+	}
+	pre,
+	blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+	/*
     * Printing Tables:
     * http://css-discuss.incutio.com/wiki/Printing_Tables
     */
-    thead {
-        display: table-header-group;
-    }
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+	thead {
+		display: table-header-group;
+	}
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
 }
